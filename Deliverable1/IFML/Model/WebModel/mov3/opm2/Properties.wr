@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="185" gr:y="235" id="mov3#opm2" name="Delete crosswalk">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#opm2#icu2" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov3#opm2#icu2#icp5" name="crosswalk_id"/>
+      <OKLink id="mov3#opm2#icu2#oln12" name="OKFlow12" to="mov3#opm2#dlu2">
+        <LinkParameter id="mov3#opm2#icu2#oln12#par46" name="crosswalk_id_KeyCondition8 [oid]" source="mov3#opm2#icu2#icp5" target="mov3#opm2#dlu2#su8#kcond8.ent3#att7"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="515" gr:y="125" id="mov3#opm2#okcu1" name="Crosswalk Deleted"/>
+    <KOCollectorUnit gr:x="515" gr:y="215" id="mov3#opm2#kocu1" name="Crosswalk not Deleted"/>
+    <DeleteUnit gr:x="310" gr:y="115" id="mov3#opm2#dlu2" name="Delete2" entity="ent3">
+      <Selector id="mov3#opm2#dlu2#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm2#dlu2#su8#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#opm2#dlu2#oln4" name="OKFlow4" to="mov3#opm2#okcu1" automaticCoupling="true"/>
+      <KOLink id="mov3#opm2#dlu2#kln3" name="KOFlow3" to="mov3#opm2#kocu1" automaticCoupling="true"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationModule>

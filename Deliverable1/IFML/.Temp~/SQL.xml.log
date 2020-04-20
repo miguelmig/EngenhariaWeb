@@ -1,0 +1,46 @@
+[15 Abr 2020 12:29:33] DEBUG Executing SQL script
+[15 Abr 2020 12:29:33] INFO ================================================================================
+[15 Abr 2020 12:29:33] INFO onError= 'continue'
+[15 Abr 2020 12:29:33] INFO autoCommit= 'false'
+[15 Abr 2020 12:29:33] INFO username= 'root'
+[15 Abr 2020 12:29:33] INFO outputPath= 'D:\WebRatio\Projects\WE101\.Temp~\SQL.xml'
+[15 Abr 2020 12:29:33] INFO outputLogPath= 'D:\WebRatio\Projects\WE101\.Temp~\SQL.xml.log'
+[15 Abr 2020 12:29:33] INFO encoding= ''
+[15 Abr 2020 12:29:33] INFO driverClass= 'com.mysql.jdbc.Driver'
+[15 Abr 2020 12:29:33] INFO sqlScript= 'D:\WebRatio\Projects\WE101\DBScripts\test.sql'
+[15 Abr 2020 12:29:33] INFO eventSocketPort= '51025'
+[15 Abr 2020 12:29:33] INFO statementSeparator= ';'
+[15 Abr 2020 12:29:33] INFO derby.system.home= 'D:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[15 Abr 2020 12:29:33] INFO password= 'yolo'
+[15 Abr 2020 12:29:33] INFO url= 'jdbc:mysql://localhost:3306/webratio'
+[15 Abr 2020 12:29:33] INFO ================================================================================
+[15 Abr 2020 12:29:33] INFO Connecting to the Database...
+[15 Abr 2020 12:29:33] INFO Database connection estabilished
+[15 Abr 2020 12:29:33] INFO transaction isolation: 4
+[15 Abr 2020 12:29:33] DEBUG ================================================================================
+[15 Abr 2020 12:29:33] DEBUG Executing SQL script file: D:\WebRatio\Projects\WE101\DBScripts\test.sql
+[15 Abr 2020 12:29:33] DEBUG Executing statement:  SELECT count(*) FROM WEBRATIO.VEHICLE_CROSSWALK1 WHERE CROSSWALK_OID = 5
+[15 Abr 2020 12:29:33] ERROR Could not execute statement:  SELECT count(*) FROM WEBRATIO.VEHICLE_CROSSWALK1 WHERE CROSSWALK_OID = 5
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'webratio.vehicle_crosswalk1' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1062)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4226)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4158)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2615)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2776)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2834)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2783)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:908)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:788)
+	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:523)
+	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
+	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
+[15 Abr 2020 12:29:33] DEBUG ================================================================================
+[15 Abr 2020 12:29:33] ERROR SQL SCRIPT EXECUTION FAILED
+[15 Abr 2020 12:29:33] INFO Database connection closed
+[15 Abr 2020 12:29:33] DEBUG Total time: 331 milliseconds

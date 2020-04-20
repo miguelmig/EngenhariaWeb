@@ -1,0 +1,35 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="90" gr:y="120" id="mov3#opm1" name="Save Crosswalk">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#opm1#icu1" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov3#opm1#icu1#icp8" name="longitude"/>
+      <InputCollectorParameter id="mov3#opm1#icu1#icp7" name="latitude"/>
+      <InputCollectorParameter id="mov3#opm1#icu1#icp6" name="state"/>
+      <InputCollectorParameter id="mov3#opm1#icu1#icp2" name="oid"/>
+      <OKLink id="mov3#opm1#icu1#oln13" name="OKFlow13" to="mov3#opm1#mfu1">
+        <LinkParameter id="mov3#opm1#icu1#oln13#par47" name="latitude_latitude" source="mov3#opm1#icu1#icp7" target="mov3#opm1#mfu1.ent3#att13"/>
+        <LinkParameter id="mov3#opm1#icu1#oln13#par48" name="longitude_longitude" source="mov3#opm1#icu1#icp8" target="mov3#opm1#mfu1.ent3#att14"/>
+        <LinkParameter id="mov3#opm1#icu1#oln13#par49" name="state_state" source="mov3#opm1#icu1#icp6" target="mov3#opm1#mfu1.ent3#att8"/>
+        <LinkParameter id="mov3#opm1#icu1#oln13#par83" name="Near Passengers_pedestrian.oid(CrosswalkTopedestrian)" source="mov3#opm1#icu1#icp16" target="mov3#opm1#mfu1.rel3#role6.ent4#att9"/>
+        <LinkParameter id="mov3#opm1#icu1#oln13#par84" name="Near Passengers_pedestrian.oid(CrosswalkTopedestrian_2)" source="mov3#opm1#icu1#icp16" target="mov3#opm1#mfu1.rel8#role16.ent4#att9"/>
+        <LinkParameter id="mov3#opm1#icu1#oln13#par85" name="Near Vehicles_vehicle.oid(CrosswalkTovehicle)" source="mov3#opm1#icu1#icp17" target="mov3#opm1#mfu1.rel4#role8.ent5#att10"/>
+        <LinkParameter id="mov3#opm1#icu1#oln13#par86" name="Near Vehicles_vehicle.oid(CrosswalkTovehicle_2)" source="mov3#opm1#icu1#icp17" target="mov3#opm1#mfu1.rel9#role18.ent5#att10"/>
+        <LinkParameter id="mov3#opm1#icu1#oln13#par95" name="oid_KeyCondition4 [oid]" source="mov3#opm1#icu1#icp2" target="mov3#opm1#mfu1#su4#kcond4.ent3#att7"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#opm1#icu1#icp17" name="Near Vehicles"/>
+      <InputCollectorParameter id="mov3#opm1#icu1#icp16" name="Near Passengers"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit gr:x="565" gr:y="170" id="mov3#opm1#kocu5" name="Not Updated"/>
+    <OKCollectorUnit gr:x="565" gr:y="70" id="mov3#opm1#okcu5" name="Crosswalk Updated">
+      <OutputCollectorParameter id="mov3#opm1#okcu5#ocp4" name="crosswalk_id"/>
+    </OKCollectorUnit>
+    <ModifyUnit gr:x="335" gr:y="105" id="mov3#opm1#mfu1" name="Update Crosswalk" entity="ent3">
+      <Selector id="mov3#opm1#mfu1#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm1#mfu1#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#opm1#mfu1#oln14" name="OKFlow14" to="mov3#opm1#okcu5">
+        <LinkParameter id="mov3#opm1#mfu1#oln14#par50" name="oid_crosswalk_id" source="ent3#att7Array" target="mov3#opm1#okcu5#ocp4"/>
+      </OKLink>
+      <KOLink id="mov3#opm1#mfu1#kln10" name="KOFlow10" to="mov3#opm1#kocu5" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

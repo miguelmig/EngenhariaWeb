@@ -1,0 +1,31 @@
+[11 Abr 2020 17:39:17] DEBUG Executing SQL script
+[11 Abr 2020 17:39:17] INFO ================================================================================
+[11 Abr 2020 17:39:17] INFO onError= 'stop'
+[11 Abr 2020 17:39:17] INFO autoCommit= 'false'
+[11 Abr 2020 17:39:17] INFO username= 'root'
+[11 Abr 2020 17:39:17] INFO outputPath= 'D:\WebRatio\Projects\WE101\.Temp~\UpdateSQL.xml'
+[11 Abr 2020 17:39:17] INFO outputLogPath= 'D:\WebRatio\Projects\WE101\.Temp~\UpdateSQL.xml.log'
+[11 Abr 2020 17:39:17] INFO encoding= ''
+[11 Abr 2020 17:39:17] INFO driverClass= 'com.mysql.jdbc.Driver'
+[11 Abr 2020 17:39:17] INFO sqlScript= 'D:\WebRatio\Projects\WE101\.Temp~\UpdateSQL.sql'
+[11 Abr 2020 17:39:17] INFO eventSocketPort= '53559'
+[11 Abr 2020 17:39:17] INFO statementSeparator= ';'
+[11 Abr 2020 17:39:17] INFO derby.system.home= 'D:\WebRatio\WebRatio Platform 7.2.18.x64bit\workspace\WE101\.metadata\.plugins\com.webratio.commons.db\derby'
+[11 Abr 2020 17:39:17] INFO password= 'yolo'
+[11 Abr 2020 17:39:17] INFO url= 'jdbc:mysql://localhost:3306/webratio'
+[11 Abr 2020 17:39:17] INFO ================================================================================
+[11 Abr 2020 17:39:17] INFO Connecting to the Database...
+[11 Abr 2020 17:39:17] INFO Database connection estabilished
+[11 Abr 2020 17:39:17] INFO transaction isolation: 4
+[11 Abr 2020 17:39:17] DEBUG ================================================================================
+[11 Abr 2020 17:39:17] DEBUG Executing SQL script file: D:\WebRatio\Projects\WE101\.Temp~\UpdateSQL.sql
+[11 Abr 2020 17:39:17] DEBUG Executing statement:  create table `pedestrians_last_month` ( `pedestrian_oid`  integer not null, `crosswalk_oid`  integer not null, primary key (`pedestrian_oid`, `crosswalk_oid`) )
+[11 Abr 2020 17:39:17] DEBUG Executing statement:  alter table `pedestrians_last_month`   add index fk_pedestrians_last_month_pede (`pedestrian_oid`), add constraint fk_pedestrians_last_month_pede foreign key (`pedestrian_oid`) references `pedestrian` (`oid`)
+[11 Abr 2020 17:39:17] DEBUG Executing statement:  alter table `pedestrians_last_month`   add index fk_pedestrians_last_month_cros (`crosswalk_oid`), add constraint fk_pedestrians_last_month_cros foreign key (`crosswalk_oid`) references `crosswalk` (`oid`)
+[11 Abr 2020 17:39:17] DEBUG Executing statement:    create table `vehicles_last_month` ( `vehicle_oid`  integer not null, `crosswalk_oid`  integer not null, primary key (`vehicle_oid`, `crosswalk_oid`) )
+[11 Abr 2020 17:39:17] DEBUG Executing statement:  alter table `vehicles_last_month`   add index fk_vehicles_last_month_vehicle (`vehicle_oid`), add constraint fk_vehicles_last_month_vehicle foreign key (`vehicle_oid`) references `vehicle` (`oid`)
+[11 Abr 2020 17:39:17] DEBUG Executing statement:  alter table `vehicles_last_month`   add index fk_vehicles_last_month_crosswa (`crosswalk_oid`), add constraint fk_vehicles_last_month_crosswa foreign key (`crosswalk_oid`) references `crosswalk` (`oid`)
+[11 Abr 2020 17:39:18] DEBUG ================================================================================
+[11 Abr 2020 17:39:18] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[11 Abr 2020 17:39:18] INFO Database connection closed
+[11 Abr 2020 17:39:18] DEBUG Total time: 699 milliseconds

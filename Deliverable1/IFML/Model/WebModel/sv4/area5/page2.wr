@@ -1,0 +1,90 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="80" gr:y="395" id="sv4#area5#page2" name="Nearby Pedestrians">
+  <ContentUnits>
+    <DataUnit gr:x="120" gr:y="0" id="sv4#area5#page2#dau2" name="Current Crosswalk" entity="ent3" displayAttributes="ent3#att7 ent3#att8 ent3#att13 ent3#att14 count(rel8#role16.ent4#att9) count(rel9#role18.ent5#att10)">
+      <Selector id="sv4#area5#page2#dau2#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area5#page2#dau2#su9#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="sv4#area5#page2#seu3" name="Selector3" entity="ent3">
+      <Selector id="sv4#area5#page2#seu3#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area5#page2#seu3#su10#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#area5#page2#seu3#ln11" name="Flow11" to="sv4#area5#page2#dau2" type="transport" validate="true">
+        <LinkParameter id="sv4#area5#page2#seu3#ln11#par36" name="oid_KeyCondition6 [oid]" source="ent3#att7Array" target="sv4#area5#page2#dau2#su9#kcond6.ent3#att7"/>
+      </Link>
+      <Link id="sv4#area5#page2#seu3#ln13" name="Flow13" to="sv4#area5#page2#seu4" type="transport" validate="true" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit gr:x="40" gr:y="130" id="sv4#area5#page2#seu4" name="Selector4" entity="ent4">
+      <Selector id="sv4#area5#page2#seu4#su11" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area5#page2#seu4#su11#rcond2" name="RoleCondition2" predicate="in" implied="false" role="rel8#role16"/>
+      </Selector>
+      <Link id="sv4#area5#page2#seu4#ln15" name="Flow15" to="sv4#area5#page2#mdu4" type="transport" validate="true">
+        <LinkParameter id="sv4#area5#page2#seu4#ln15#par52" name="oid_KeyCondition9 [oid]" source="ent4#att9Array" target="sv4#area5#page2#mdu4#su12#kcond9.ent4#att9"/>
+      </Link>
+    </SelectorUnit>
+    <MultiDataUnit gr:x="55" gr:y="265" id="sv4#area5#page2#mdu4" name="Nearby Pedestrians" entity="ent4" displayAttributes="ent4#att9 ent4#att11 ent4#att12">
+      <Selector id="sv4#area5#page2#mdu4#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#area5#page2#mdu4#su12#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+    </MultiDataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area5#page2#dau2">
+          <layout:Attribute attribute="ent3#att7"/>
+          <layout:Attribute attribute="ent3#att8"/>
+          <layout:Attribute attribute="ent3#att13"/>
+          <layout:Attribute attribute="ent3#att14"/>
+          <layout:Attribute attribute="count(rel8#role16.ent4#att9)"/>
+          <layout:Attribute attribute="count(rel9#role18.ent5#att10)"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area5#page2#mdu4">
+          <layout:Attribute attribute="ent4#att9"/>
+          <layout:Attribute attribute="ent4#att11"/>
+          <layout:Attribute attribute="ent4#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

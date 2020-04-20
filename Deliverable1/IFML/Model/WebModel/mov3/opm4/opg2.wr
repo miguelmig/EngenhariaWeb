@@ -1,0 +1,10 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="315" gr:y="70" id="mov3#opm4#opg2" name="Operation Group 2" transaction="true">
+  <OperationUnits>
+    <CreateUnit gr:x="0" gr:y="0" id="mov3#opm4#opg2#cru5" name="add crosswalk" entity="ent3">
+      <OKLink id="mov3#opm4#opg2#cru5#oln3" name="OKFlow3" to="mov3#opm4#okcu3">
+        <LinkParameter id="mov3#opm4#opg2#cru5#oln3#par13" name="oid_crosswalk" source="ent3#att7Array" target="mov3#opm4#okcu3#ocp2"/>
+      </OKLink>
+    </CreateUnit>
+  </OperationUnits>
+  <KOLink id="mov3#opm4#opg2#kln8" name="KOFlow8" to="mov3#opm4#kocu3" automaticCoupling="true"/>
+</OperationGroup>

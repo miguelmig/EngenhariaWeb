@@ -1,0 +1,24 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="325" gr:y="120" id="mov3#opm4" name="Add Crosswalk">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#opm4#icu4" gr:x="30" gr:y="60">
+      <OKLink id="mov3#opm4#icu4#oln1" name="Flow10" to="mov3#opm4#opg2#cru5">
+        <LinkParameter id="mov3#opm4#icu4#oln1#par22" name="latitude_latitude" source="mov3#opm4#icu4#icp3" target="mov3#opm4#opg2#cru5.ent3#att13"/>
+        <LinkParameter id="mov3#opm4#icu4#oln1#par23" name="longitude_longitude" source="mov3#opm4#icu4#icp4" target="mov3#opm4#opg2#cru5.ent3#att14"/>
+        <LinkParameter id="mov3#opm4#icu4#oln1#par24" name="state_state" source="mov3#opm4#icu4#icp1" target="mov3#opm4#opg2#cru5.ent3#att8"/>
+        <LinkParameter id="mov3#opm4#icu4#oln1#par87" name="Nearby Passengers_pedestrian.oid(CrosswalkTopedestrian)" source="mov3#opm4#icu4#icp18" target="mov3#opm4#opg2#cru5.rel3#role6.ent4#att9"/>
+        <LinkParameter id="mov3#opm4#icu4#oln1#par88" name="Nearby Passengers_pedestrian.oid(CrosswalkTopedestrian_2)" source="mov3#opm4#icu4#icp18" target="mov3#opm4#opg2#cru5.rel8#role16.ent4#att9"/>
+        <LinkParameter id="mov3#opm4#icu4#oln1#par89" name="Nearby Vehicles_vehicle.oid(CrosswalkTovehicle)" source="mov3#opm4#icu4#icp19" target="mov3#opm4#opg2#cru5.rel4#role8.ent5#att10"/>
+        <LinkParameter id="mov3#opm4#icu4#oln1#par90" name="Nearby Vehicles_vehicle.oid(CrosswalkTovehicle_2)" source="mov3#opm4#icu4#icp19" target="mov3#opm4#opg2#cru5.rel9#role18.ent5#att10"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#opm4#icu4#icp4" name="longitude"/>
+      <InputCollectorParameter id="mov3#opm4#icu4#icp3" name="latitude"/>
+      <InputCollectorParameter id="mov3#opm4#icu4#icp1" name="state"/>
+      <InputCollectorParameter id="mov3#opm4#icu4#icp19" name="Nearby Vehicles"/>
+      <InputCollectorParameter id="mov3#opm4#icu4#icp18" name="Nearby Pedestrians"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="650" gr:y="75" id="mov3#opm4#okcu3" name="OK Port3">
+      <OutputCollectorParameter id="mov3#opm4#okcu3#ocp2" name="crosswalk"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="650" gr:y="190" id="mov3#opm4#kocu3" name="KO Port3"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="75" gr:y="380" id="mov3#opm3" name="Add Pedestrian to Crosswalk">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#opm3#icu3" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov3#opm3#icu3#icp10" name="longitude"/>
+      <InputCollectorParameter id="mov3#opm3#icu3#icp9" name="latitude"/>
+      <OKLink id="mov3#opm3#icu3#oln2" name="OKFlow2" to="mov3#opm3#opg1#cru3">
+        <LinkParameter id="mov3#opm3#icu3#oln2#par3" name="latitude_latitude" source="mov3#opm3#icu3#icp9" target="mov3#opm3#opg1#cru3.ent4#att11"/>
+        <LinkParameter id="mov3#opm3#icu3#oln2#par5" name="longitude_longitude" source="mov3#opm3#icu3#icp10" target="mov3#opm3#opg1#cru3.ent4#att12"/>
+        <LinkParameter id="mov3#opm3#icu3#oln2#par6" name="crosswalks_Crosswalk.oid(pedestrianToCrosswalk)" source="mov3#opm3#icu3#icp11" target="mov3#opm3#opg1#cru3.rel3#role5.ent3#att7"/>
+        <LinkParameter id="mov3#opm3#icu3#oln2#par8" name="crosswalks_Crosswalk.oid(pedestrianToCrosswalk_2)" source="mov3#opm3#icu3#icp11" target="mov3#opm3#opg1#cru3.rel8#role15.ent3#att7"/>
+      </OKLink>
+      <InputCollectorParameter id="mov3#opm3#icu3#icp11" name="crosswalks"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="530" gr:y="65" id="mov3#opm3#okcu2" name="Pedestrian Added">
+      <OutputCollectorParameter id="mov3#opm3#okcu2#ocp1" name="pedestrian"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="530" gr:y="215" id="mov3#opm3#kocu2" name="Pedestrian not Added"/>
+  </OperationUnits>
+</OperationModule>

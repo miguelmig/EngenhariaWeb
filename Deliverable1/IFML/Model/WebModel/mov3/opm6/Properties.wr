@@ -1,0 +1,13 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="435" gr:y="430" id="mov3#opm6" name="Nearby Pedestrians">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#opm6#icu6" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov3#opm6#icu6#icp15" name="crosswalk_id"/>
+      <OKLink id="mov3#opm6#icu6#oln16" name="OKFlow16" to="mov3#opm6#qu1">
+        <LinkParameter id="mov3#opm6#icu6#oln16#par29" name="crosswalk_id_Condition Values" source="mov3#opm6#icu6#icp15" target="mov3#opm6#qu1.condValues"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <QueryUnit gr:x="315" gr:y="75" id="mov3#opm6#qu1" name="Query1" mode="dynamic" language="HQL" db="db1">
+      <QueryText xml:space="preserve">SELECT COUNT(*) FROM pedestrian_crosswalk WHERE crosswalk_oid = ?</QueryText>
+    </QueryUnit>
+  </OperationUnits>
+</OperationModule>

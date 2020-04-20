@@ -1,0 +1,19 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="505" gr:y="305" id="mov3#opm5" name="Add Vehicle to Crosswalk">
+  <OperationUnits>
+    <InputCollectorUnit id="mov3#opm5#icu5" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov3#opm5#icu5#icp14" name="crosswalks"/>
+      <InputCollectorParameter id="mov3#opm5#icu5#icp13" name="longitude"/>
+      <InputCollectorParameter id="mov3#opm5#icu5#icp12" name="latitude"/>
+      <OKLink id="mov3#opm5#icu5#oln8" name="OKFlow8" to="mov3#opm5#opg3#cru2">
+        <LinkParameter id="mov3#opm5#icu5#oln8#par15" name="crosswalks_Crosswalk.oid(vehicleToCrosswalk)" source="mov3#opm5#icu5#icp14" target="mov3#opm5#opg3#cru2.rel4#role7.ent3#att7"/>
+        <LinkParameter id="mov3#opm5#icu5#oln8#par25" name="crosswalks_Crosswalk.oid(vehicleToCrosswalk_2)" source="mov3#opm5#icu5#icp14" target="mov3#opm5#opg3#cru2.rel9#role17.ent3#att7"/>
+        <LinkParameter id="mov3#opm5#icu5#oln8#par37" name="latitude_latitude" source="mov3#opm5#icu5#icp12" target="mov3#opm5#opg3#cru2.ent5#att15"/>
+        <LinkParameter id="mov3#opm5#icu5#oln8#par38" name="longitude_longitude" source="mov3#opm5#icu5#icp13" target="mov3#opm5#opg3#cru2.ent5#att16"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="545" gr:y="75" id="mov3#opm5#okcu4" name="Vehicle Added">
+      <OutputCollectorParameter id="mov3#opm5#okcu4#ocp3" name="vehicle"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="545" gr:y="255" id="mov3#opm5#kocu4" name="Vehicle Not Added"/>
+  </OperationUnits>
+</OperationModule>

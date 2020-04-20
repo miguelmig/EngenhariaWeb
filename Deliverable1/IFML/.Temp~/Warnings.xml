@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Warnings> 
+  <Warning xpath="id('sv4#miu3#kln9')" rootXPath="id('sv4')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="KOFlow9"> 
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'KOFlow9'</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="automaticCoupling" value="">Remove the 'Automatic Coupling' property</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv4#miu5#kln5')" rootXPath="id('sv4')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="KOFlow5"> 
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'KOFlow5'</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="automaticCoupling" value="">Remove the 'Automatic Coupling' property</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv4#area3#miu2#kln2')" rootXPath="id('sv4')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="KOFlow2"> 
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'KOFlow2'</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="automaticCoupling" value="">Remove the 'Automatic Coupling' property</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv4#area5#miu4#kln7')" rootXPath="id('sv4')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="KOFlow7"> 
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'KOFlow7'</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="automaticCoupling" value="">Remove the 'Automatic Coupling' property</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv4#area5#miu1#kln11')" rootXPath="id('sv4')" key="AUTOMATIC_COUPLING_WITHOUT_EFFECT" label="KOFlow11"> 
+    <Message>Neither explicit nor implicit parameters' bindings could be found for the flow 'KOFlow11'</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="automaticCoupling" value="">Remove the 'Automatic Coupling' property</Resolution> 
+  </Warning>  
+  <Warning xpath="id('sv4#area5#pcu1')" rootXPath="id('sv4')" error="false" label="Split" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK flow(s) for the operation 'Split'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#area5#page9#inu1')" rootXPath="id('sv4')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Crosswalks"> 
+    <Message>Sorting attribute are unspecified for the component 'Crosswalks'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#area5#page2#mdu4')" rootXPath="id('sv4')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Nearby Pedestrians"> 
+    <Message>Sorting attribute are unspecified for the component 'Nearby Pedestrians'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#area5#page3#mdu5')" rootXPath="id('sv4')" key="UNSPECIFIED_SORTING_ATTRIBUTE" label="Nearby Vehicles"> 
+    <Message>Sorting attribute are unspecified for the component 'Nearby Vehicles'</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#area5#page9')" rootXPath="id('sv4')" key="" label="List Crosswalks"> 
+    <Message>Security Warning: the page 'List Crosswalks' is public but no captcha field is configured on its form component</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#area5#page7')" rootXPath="id('sv4')" key="" label="Add Crosswalk"> 
+    <Message>Security Warning: the page 'Add Crosswalk' is public but no captcha field is configured on its form component</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#area1#page1')" rootXPath="id('sv4')" key="" label="Add Vehicle"> 
+    <Message>Security Warning: the page 'Add Vehicle' is public but no captcha field is configured on its form component</Message> 
+  </Warning>  
+  <Warning error="false" xpath="id('sv4#area3#page8')" rootXPath="id('sv4')" key="" label="Add Pedestrian"> 
+    <Message>Security Warning: the page 'Add Pedestrian' is public but no captcha field is configured on its form component</Message> 
+  </Warning>  
+  <Warning xpath="/WebProject" rootXPath="/WebProject" key="" label="WebProject"> 
+    <Message>Security Warning: the Admin Area generation is enabled</Message>  
+    <Resolution class="com.webratio.ide.ui.resources.ChangeAttributeResolutionGenerator" attribute="adminArea" value="">Remove the 'Admin Area' property</Resolution> 
+  </Warning> 
+</Warnings>

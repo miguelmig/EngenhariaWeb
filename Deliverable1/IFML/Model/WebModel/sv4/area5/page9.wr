@@ -1,0 +1,134 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="400" gr:y="0" id="sv4#area5#page9" name="List Crosswalks" landmark="true">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv4#area5#page9#inu1" name="Crosswalks" entity="ent3" displayAttributes="ent3#att8 ent3#att13 ent3#att14 ent3#att7 countDistinct(rel8#role16.ent4#att9) countDistinct(rel9#role18.ent5#att10)" customDescriptor="false" linkOrder="sv4#area5#page9#inu1#ln14 sv4#area5#page9#inu1#ln9 sv4#area5#page9#inu1#ln19 sv4#area5#page9#inu1#ln29">
+      <Link id="sv4#area5#page9#inu1#ln14" name="Delete" to="sv4#area5#miu4" type="normal" validate="true">
+        <LinkParameter id="sv4#area5#page9#inu1#ln14#par41" name="oid_crosswalk_id" source="data[].ent3#att7" target="sv4#area5#miu4.mov3#opm2#icu2#icp5"/>
+      </Link>
+      <Link id="sv4#area5#page9#inu1#ln9" name="Nearby Pedestrians" to="sv4#area5#page2#seu3" type="normal" validate="true" gr:bendpoints="-31,307,289,-98;-320,306,0,-99">
+        <LinkParameter id="sv4#area5#page9#inu1#ln9#par35" name="oid_KeyCondition7 [oid]" source="data[].ent3#att7" target="sv4#area5#page2#seu3#su10#kcond7.ent3#att7"/>
+      </Link>
+      <Link id="sv4#area5#page9#inu1#ln19" name="Nearby Vehicles" to="sv4#area5#page3#seu6" type="normal" validate="true" gr:bendpoints="39,234,79,-206;21,353,61,-87">
+        <LinkParameter id="sv4#area5#page9#inu1#ln19#par56" name="oid_KeyCondition7 [oid]" source="data[].ent3#att7" target="sv4#area5#page3#seu6#su13#kcond11.ent3#att7"/>
+      </Link>
+      <Link id="sv4#area5#page9#inu1#ln29" name="Details" to="sv4#area5#pcu1" type="normal" validate="true" newWindow="false">
+        <LinkParameter id="sv4#area5#page9#inu1#ln29#par64" name="oid_Collector Parameter1" source="data[].ent3#att7" target="sv4#area5#pcu1#pcp1"/>
+        <LinkParameter id="sv4#area5#page9#inu1#ln29#par66" name="latitude_lat" source="data[].ent3#att13" target="sv4#area5#pcu1#pcp3"/>
+        <LinkParameter id="sv4#area5#page9#inu1#ln29#par67" name="longitude_long" source="data[].ent3#att14" target="sv4#area5#pcu1#pcp4"/>
+        <LinkParameter id="sv4#area5#page9#inu1#ln29#par68" name="state_state" source="data[].ent3#att8" target="sv4#area5#pcu1#pcp2"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit id="sv4#area5#page9#enu6" name="Current Crosswalk" gr:x="235" gr:y="110" entity="ent3" fieldOrder="sv4#area5#page9#enu6#fld11 sv4#area5#page9#enu6#fld10 sv4#area5#page9#enu6#fld9 sv4#area5#page9#enu6#fld8 sv4#area5#page9#enu6#msfld5 sv4#area5#page9#enu6#msfld6" linkOrder="sv4#area5#page9#enu6#ln17">
+      <Field id="sv4#area5#page9#enu6#fld8" name="longitude" type="float" modifiable="true" preloaded="true"/>
+      <Field id="sv4#area5#page9#enu6#fld9" name="latitude" type="float" modifiable="true" preloaded="true"/>
+      <Field id="sv4#area5#page9#enu6#fld10" name="state" type="string" modifiable="true" preloaded="true"/>
+      <Link id="sv4#area5#page9#enu6#ln17" name="Update" to="sv4#area5#miu1" type="normal" validate="true">
+        <LinkParameter id="sv4#area5#page9#enu6#ln17#par31" name="latitude_latitude" source="sv4#area5#page9#enu6#fld9" target="sv4#area5#miu1.mov3#opm1#icu1#icp7"/>
+        <LinkParameter id="sv4#area5#page9#enu6#ln17#par32" name="longitude_longitude" source="sv4#area5#page9#enu6#fld8" target="sv4#area5#miu1.mov3#opm1#icu1#icp8"/>
+        <LinkParameter id="sv4#area5#page9#enu6#ln17#par33" name="oid_oid" source="sv4#area5#page9#enu6#fld11" target="sv4#area5#miu1.mov3#opm1#icu1#icp2"/>
+        <LinkParameter id="sv4#area5#page9#enu6#ln17#par34" name="state_state" source="sv4#area5#page9#enu6#fld10" target="sv4#area5#miu1.mov3#opm1#icu1#icp6"/>
+        <LinkParameter id="sv4#area5#page9#enu6#ln17#par91" name="Nearby Passengers_Near Passengers" source="sv4#area5#page9#enu6#msfld5" target="sv4#area5#miu1.mov3#opm1#icu1#icp16"/>
+        <LinkParameter id="sv4#area5#page9#enu6#ln17#par92" name="Nearby Vehicles_Near Vehicles" source="sv4#area5#page9#enu6#msfld6" target="sv4#area5#miu1.mov3#opm1#icu1#icp17"/>
+      </Link>
+      <Field id="sv4#area5#page9#enu6#fld11" name="oid" type="integer" preloaded="true"/>
+      <MultiSelectionField id="sv4#area5#page9#enu6#msfld6" name="Nearby Vehicles" type="integer" modifiable="true" slotOrder="sv4#area5#page9#enu6#msfld6#slot6" role="rel9#role18">
+        <Slot id="sv4#area5#page9#enu6#msfld6#slot6" name="Slot6" label="true" output="true"/>
+      </MultiSelectionField>
+      <MultiSelectionField id="sv4#area5#page9#enu6#msfld5" name="Nearby Passengers" type="integer" modifiable="true" slotOrder="sv4#area5#page9#enu6#msfld5#slot4" role="rel8#role16">
+        <Slot id="sv4#area5#page9#enu6#msfld5#slot4" name="Slot4" label="true" output="true"/>
+      </MultiSelectionField>
+    </EntryUnit>
+    <SelectorUnit id="sv4#area5#page9#seu10" name="Vehicles" gr:x="380" gr:y="235" entity="ent5">
+      <Link id="sv4#area5#page9#seu10#ln37" name="Flow37" to="sv4#area5#page9#enu6" type="transport" validate="true">
+        <LinkParameter id="sv4#area5#page9#seu10#ln37#par80" name="oid_Nearby Vehicles" source="ent5#att10Array" target="sv4#area5#page9#enu6#msfld6#slot6"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv4#area5#page9#seu11" name="Pedestrians" gr:x="475" gr:y="205" entity="ent4">
+      <Link id="sv4#area5#page9#seu11#ln36" name="Flow36" to="sv4#area5#page9#enu6" type="transport" validate="true">
+        <LinkParameter id="sv4#area5#page9#seu11#ln36#par79" name="oid_Nearby Passengers" source="ent4#att9Array" target="sv4#area5#page9#enu6#msfld5#slot4"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="150" gr:y="260" id="sv4#area5#page9#seu12" name="Nearby Vehicles" entity="ent5">
+      <Selector id="sv4#area5#page9#seu12#su17" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area5#page9#seu12#su17#rcond4" name="RoleCondition4" predicate="in" implied="false" role="rel9#role18"/>
+      </Selector>
+      <Link id="sv4#area5#page9#seu12#ln39" name="Flow39" to="sv4#area5#page9#enu6" type="transport" validate="true">
+        <LinkParameter id="sv4#area5#page9#seu12#ln39#par82" name="oid_Nearby Vehicles - Preselection" source="ent5#att10Array" target="sv4#area5#page9#enu6#msfld6_presel"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="300" gr:y="330" id="sv4#area5#page9#seu13" name="Nearby Pedestrians" entity="ent4">
+      <Selector id="sv4#area5#page9#seu13#su18" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area5#page9#seu13#su18#rcond5" name="RoleCondition5" predicate="in" implied="false" role="rel8#role16"/>
+      </Selector>
+      <Link id="sv4#area5#page9#seu13#ln38" name="Flow38" to="sv4#area5#page9#enu6" type="transport" validate="true">
+        <LinkParameter id="sv4#area5#page9#seu13#ln38#par81" name="oid_Nearby Passengers - Preselection" source="ent4#att9Array" target="sv4#area5#page9#enu6#msfld5_presel"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area5#page9#inu1">
+          <layout:Attribute attribute="ent3#att8"/>
+          <layout:Attribute attribute="ent3#att13"/>
+          <layout:Attribute attribute="ent3#att14"/>
+          <layout:Attribute attribute="ent3#att7"/>
+          <layout:Attribute attribute="countDistinct(rel8#role16.ent4#att9)"/>
+          <layout:Attribute attribute="countDistinct(rel9#role18.ent5#att10)"/>
+          <layout:Link link="sv4#area5#page9#inu1#ln14"/>
+          <layout:Link link="sv4#area5#page9#inu1#ln9"/>
+          <layout:Link link="sv4#area5#page9#inu1#ln19"/>
+          <layout:Link link="sv4#area5#page9#inu1#ln29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area5#page9#enu6">
+          <layout:Link link="sv4#area5#page9#enu6#ln17"/>
+          <layout:Field field="sv4#area5#page9#enu6#fld11"/>
+          <layout:Field field="sv4#area5#page9#enu6#fld10"/>
+          <layout:Field field="sv4#area5#page9#enu6#fld9"/>
+          <layout:Field field="sv4#area5#page9#enu6#fld8"/>
+          <layout:Field field="sv4#area5#page9#enu6#msfld5"/>
+          <layout:Field field="sv4#area5#page9#enu6#msfld6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
